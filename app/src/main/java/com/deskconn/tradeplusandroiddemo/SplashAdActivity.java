@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.tradplus.ads.base.bean.TPAdError;
 import com.tradplus.ads.base.bean.TPAdInfo;
 import com.tradplus.ads.base.bean.TPBaseAd;
 import com.tradplus.ads.open.splash.SplashAdListener;
@@ -45,7 +46,21 @@ public class SplashAdActivity extends AppCompatActivity {
             @Override
             public void onAdLoaded(TPAdInfo tpAdInfo, TPBaseAd tpBaseAd) {
                 Log.i(TAG, "onAdLoaded: ");
-                tpSplash.showAd(findViewById(R.id.splash_container));
+                tpSplash.showAd();
+            }
+
+            @Override
+            public void onAdLoadFailed(TPAdError tpAdError) {
+                super.onAdLoadFailed(tpAdError);
+                Log.i(TAG, "onAdLoadFailed: ");
+                finish();
+            }
+
+            @Override
+            public void onAdShowFailed(TPAdInfo tpAdInfo, TPAdError tpAdError) {
+                super.onAdShowFailed(tpAdInfo, tpAdError);
+                Log.i(TAG, "onAdShowFailed: ");
+                finish();
             }
         });
         tpSplash.loadAd(null);
