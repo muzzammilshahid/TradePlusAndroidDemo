@@ -98,8 +98,8 @@ public class InterstitialActivity extends AppCompatActivity {
 
             @Override
             public void oneLayerLoaded(TPAdInfo tpAdInfo) {
-                Log.i(TAG, "oneLayerLoaded: " + tpAdInfo.adSourceName + " 加载成功");
-                tv.setText("oneLayerLoaded: " + tpAdInfo.adSourceName + " 加载成功");
+                Log.i(TAG, "oneLayerLoaded: " + tpAdInfo.adSourceName);
+                tv.setText("oneLayerLoaded: " + tpAdInfo.adSourceName);
             }
 
             @Override

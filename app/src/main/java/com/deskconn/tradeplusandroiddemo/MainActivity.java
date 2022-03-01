@@ -1,9 +1,9 @@
 package com.deskconn.tradeplusandroiddemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,5 +17,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.banner_button).setOnClickListener(view -> startActivity(new Intent(this, BannerActivity.class)));
 
         findViewById(R.id.native_button).setOnClickListener(view -> startActivity(new Intent(this, NativeBannerActivity.class)));
+
+        findViewById(R.id.splash_button).setOnClickListener(view -> startActivity(new Intent(this, SplashAdActivity.class)));
+
     }
 }

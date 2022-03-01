@@ -13,6 +13,7 @@ public class AppGlobals extends Application {
     public static final String BANNER_ADUNITID = "A24091715B4FCD50C0F2039A5AF7C4BB";
 
     public static final String ENTRY_AD_INTERSTITIAL = "01EAD2CCED1870";
+    public static final String SPLASH_ADUNITID = "D9118E91DD06DF6D322369455CAED618";
 
     @Override
     public void onCreate() {

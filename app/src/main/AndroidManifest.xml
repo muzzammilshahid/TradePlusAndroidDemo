@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TradePlusAndroidDemo">
         <activity
+            android:name=".SplashAdActivity"
+            android:exported="false" />
+        <activity
             android:name=".NativeBannerActivity"
             android:exported="false" />
         <activity

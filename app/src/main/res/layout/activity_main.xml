@@ -30,4 +30,12 @@
         android:layout_marginVertical="10dp"
         android:padding="10dp"
         android:text="Native" />
+
+    <Button
+        android:id="@+id/splash_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:text="Splash" />
 </LinearLayout>
