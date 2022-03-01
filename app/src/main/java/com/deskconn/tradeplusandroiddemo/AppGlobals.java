@@ -2,6 +2,8 @@ package com.deskconn.tradeplusandroiddemo;
 
 import android.app.Application;
 
+import com.tradplus.ads.open.TradPlusSdk;
+
 public class AppGlobals extends Application {
 
     public static final String APPID = "44273068BFF4D8A8AFF3D5B11CBA3ADE";
@@ -22,5 +24,6 @@ public class AppGlobals extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        TradPlusSdk.initSdk(this, APPID);
     }
 }

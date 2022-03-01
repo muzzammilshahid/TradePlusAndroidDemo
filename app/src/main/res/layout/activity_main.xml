@@ -3,59 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".InterstitialActivity">
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/interstitial_button"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:text="Interstitial" />
 
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text=" "
-            android:textSize="16sp" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/banner_button"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:text="Banner" />
 
-        <Button
-            android:id="@+id/load"
-            android:layout_width="200.0dip"
-            android:layout_height="50.0dip"
-            android:gravity="center"
-            android:text="Load"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/native_button"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/show"
-            android:layout_width="200.0dip"
-            android:layout_height="50.0dip"
-            android:gravity="center"
-            android:text="Show"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
-    </LinearLayout>
-
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:text="Native" />
 </LinearLayout>

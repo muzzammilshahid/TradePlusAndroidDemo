@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TradePlusAndroidDemo">
         <activity
-            android:name="com.deskconn.tradeplusandroiddemo.InterstitialActivity"
+            android:name=".NativeBannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".BannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InterstitialActivity"
+            android:exported="true" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -30,15 +39,12 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
-
         <meta-data
             android:name="applovin.sdk.key"
             android:value="-Xtl_oRuS0L4WSmxnIHXusTCoMrq2cslufstvSvGFnVQWLcoeZCu-_NXWZE0c6-QqiZ-BIFRxm6zBs2zwByKPb" />
-
     </application>
 
 </manifest>

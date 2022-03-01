@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.tradplus.ads.base.bean.TPAdError;
 import com.tradplus.ads.base.bean.TPAdInfo;
 import com.tradplus.ads.open.LoadAdEveryLayerListener;
-import com.tradplus.ads.open.TradPlusSdk;
 import com.tradplus.ads.open.interstitial.InterstitialAdListener;
 import com.tradplus.ads.open.interstitial.TPInterstitial;
 
@@ -24,9 +23,8 @@ public class InterstitialActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.interstitial_main);
 
-        TradPlusSdk.initSdk(this, "44273068BFF4D8A8AFF3D5B11CBA3ADE");
 
         tv = findViewById(R.id.tv);
         interstitial_load = findViewById(R.id.load);
@@ -39,7 +37,7 @@ public class InterstitialActivity extends AppCompatActivity {
                 Log.i(TAG, "isReady: not ready");
                 tv.setText("isReady: not ready");
             } else {
-                mTPInterstitial.showAd(InterstitialActivity.this, "01EAD2CCED1870");
+                mTPInterstitial.showAd(InterstitialActivity.this, AppGlobals.ENTRY_AD_INTERSTITIAL);
                 Log.i(TAG, "showAd: add shown");
             }
         });
@@ -48,8 +46,8 @@ public class InterstitialActivity extends AppCompatActivity {
     }
 
     private void initInterstitialAd() {
-        mTPInterstitial = new TPInterstitial(this, "E609A0A67AF53299F2176C3A7783C46D", false);
-        mTPInterstitial.entryAdScenario("01EAD2CCED1870");
+        mTPInterstitial = new TPInterstitial(this, AppGlobals.INTERSTITIAL_ADUNITID, false);
+        mTPInterstitial.entryAdScenario(AppGlobals.ENTRY_AD_INTERSTITIAL);
 
         mTPInterstitial.setAdListener(new InterstitialAdListener() {
             @Override
