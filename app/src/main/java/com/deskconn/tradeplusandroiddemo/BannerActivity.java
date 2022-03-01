@@ -28,32 +28,31 @@ public class BannerActivity extends AppCompatActivity {
     }
 
     private void loadBanner() {
-        // new TPBanner，也可以把TPBanner写在开发者的xml中，这里改成findViewById
         tpBanner = new TPBanner(this);
         tpBanner.setAdListener(new BannerAdListener() {
             @Override
             public void onAdClicked(TPAdInfo tpAdInfo) {
-                Log.i(TAG, "onAdClicked: " + tpAdInfo.adSourceName + "被点击了");
+                Log.i(TAG, "onAdClicked: " + tpAdInfo.adSourceName);
             }
 
             @Override
             public void onAdImpression(TPAdInfo tpAdInfo) {
-                Log.i(TAG, "onAdImpression: " + tpAdInfo.adSourceName + "展示了");
+                Log.i(TAG, "onAdImpression: " + tpAdInfo.adSourceName);
             }
 
             @Override
             public void onAdLoaded(TPAdInfo tpAdInfo) {
-                Log.i(TAG, "onAdLoaded: " + tpAdInfo.adSourceName + "加载成功");
+                Log.i(TAG, "onAdLoaded: " + tpAdInfo.adSourceName);
             }
 
             @Override
             public void onAdLoadFailed(TPAdError error) {
-                Log.i(TAG, "onAdLoadFailed: 加载失败，code :" + error.getErrorCode() + ", msg : " + error.getErrorMsg());
+                Log.i(TAG, "onAdLoadFailed:，code :" + error.getErrorCode() + ", msg : " + error.getErrorMsg());
             }
 
             @Override
             public void onAdClosed(TPAdInfo tpAdInfo) {
-                Log.i(TAG, "onAdClosed: " + tpAdInfo.adSourceName + "广告关闭");
+                Log.i(TAG, "onAdClosed: " + tpAdInfo.adSourceName);
             }
         });
         adContainer.addView(tpBanner);
